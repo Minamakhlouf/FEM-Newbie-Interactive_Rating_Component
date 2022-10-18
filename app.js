@@ -1,10 +1,11 @@
+/* Selecting relevant elements */ 
 const list = document.querySelectorAll("ul li"); 
 const select = document.querySelector(".select");
 const preselection = document.querySelector(".preselection") 
 const postselection = document.querySelector(".postselection") 
 const span = document.querySelector("span"); 
 
-
+/*When a user clicks a button the button that is selected gets a special class attached to it*/
 list.forEach((item) => {
     item.addEventListener("click", function(e) {
         list.forEach((item) => {item.classList.remove("picked")}); 
@@ -12,6 +13,7 @@ list.forEach((item) => {
     })
 }); 
 
+/*When the select button is clicked, we check if one of the numbered buttons has been selected. If not, we prompt the user to click one. If so, we move to the page and tell them what number they selected*/
 select.addEventListener("click", function() {
     let picked = document.querySelector(".picked"); 
     try {

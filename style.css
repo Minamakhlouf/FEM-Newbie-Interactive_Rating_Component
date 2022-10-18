@@ -11,9 +11,17 @@ body {
     font-family: Overpass; 
 }
 
+/*Utility Classes*/ 
+
 .hidden {
     z-index: -5; 
 }
+
+.selected {
+    background-color: hsl(25, 97%, 53%);
+}
+
+/*Styling Main Container and child elements */ 
 
 main {
     border-radius: 30px; 
@@ -71,16 +79,12 @@ li:hover {
     transform: translateX(-50%) translateY(-50%); 
     background-color: hsl(213, 19%, 18%); 
     border-radius: 30px; 
+    padding: 23px; 
+    width: 327px; 
 }
 
 .preselection > * + *, .postselection > * + * {
     margin-top: 15px; 
-}
-
-.preselection {
-    padding: 23px; 
-    width: 327px; 
-
 }
 
 .image-container {
@@ -115,17 +119,8 @@ button:hover {
     color:hsl(25, 97%, 53%); 
 }
 
-.selected {
-    background-color: hsl(25, 97%, 53%);
-}
-
 .postselection {
-    padding: 30px; 
-    /*display: flex; 
-    flex-direction: column;
-    justify-content: center;*/
     text-align: center;
-    width: 327px; 
 }
 
 .postselection div {
@@ -144,6 +139,8 @@ button:hover {
     display: inline-block; 
     padding: 5px 10px; 
 }
+
+/* Setting style for larger screen size*/ 
 
 @media screen and (min-width: 430px) {
     .postselection, .preselection {
